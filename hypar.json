@@ -1,0 +1,70 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "8e7329d5-1b46-41a4-965f-dc5d8a1c3e85",
+  "name": "InputData_Tester",
+  "description": "The InputDataTester function.",
+  "language": "C#",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "Single": {
+        "$hyparFileTypes": [
+          "obj"
+        ],
+        "$ref": "https://schemas.hypar.io/InputData.json"
+      },
+      "InputData List": {
+        "type": "array",
+        "items": {
+          "$ref": "https://hypar.io/Schemas/InputData.json",
+          "$hyparFileTypes": [
+            "obj"
+          ]
+        }
+      },
+      "Objects": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "$hyparStyle": "row",
+          "properties": {
+            "File": {
+              "$ref": "https://hypar.io/Schemas/InputData.json",
+              "$hyparFileTypes": [
+                "obj"
+              ]
+            }
+          }
+        }
+      },
+      "Hierarchical": {
+        "type": "object",
+        "properties": {
+          "A nested InputData List": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Object with InputData": {
+                  "$ref": "https://hypar.io/Schemas/InputData.json",
+                  "$hyparFileTypes": [
+                    "obj"
+                  ]
+                }
+              }
+            }
+          },
+          "nesTed iNput DAta": {
+            "$hyparFileTypes": [
+              "obj"
+            ],
+            "$ref": "https://schemas.hypar.io/InputData.json"
+          }
+        }
+      }
+    }
+  },
+  "repository_url": "https://github.com/hypar-io/function",
+  "last_updated": "0001-01-01T00:00:00",
+  "cli_version": "1.7.0-alpha.15"
+}
